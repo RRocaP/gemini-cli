@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+/**
+ * Gemini CLI executable
+ */
+
+require('../cli/index.js');

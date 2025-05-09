@@ -1,0 +1,26 @@
+{
+  "name": "gemini-cli",
+  "version": "1.0.0",
+  "description": "A command-line interface for Google's Gemini API inspired by Claude Code",
+  "main": "cli/index.js",
+  "bin": {
+    "gemini-cli": "./bin/gemini-cli"
+  },
+  "scripts": {
+    "start": "node cli/index.js",
+    "start-proxy": "cd proxy && uvicorn server:app --reload",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-all": "npm install && cd proxy && pip install -r requirements.txt",
+    "postinstall": "chmod +x cli/index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^16.0.3",
+    "glob": "^8.1.0",
+    "node-fetch": "^2.6.7",
+    "yargs": "^17.7.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
